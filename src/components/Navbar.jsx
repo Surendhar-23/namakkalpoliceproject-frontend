@@ -5,15 +5,21 @@ import "./navbar_style.css";
 
 export default function Navbar({ onLogout }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
+  };
+
+  const toggleUserMenu = () => {
+    setIsUserMenuOpen((prev) => !prev);
   };
 
   const handleLinkClick = () => {
     if (isMenuOpen) {
       setIsMenuOpen(false); // Close the menu
     }
+    if (isUserMenuOpen) setIsUserMenuOpen(false);
   };
 
   return (
@@ -29,6 +35,7 @@ export default function Navbar({ onLogout }) {
             to="/"
             activeClassName="active"
             onClick={handleLinkClick}
+            style={{ width: "100%" }}
           >
             Home
           </NavLink>
@@ -60,14 +67,33 @@ export default function Navbar({ onLogout }) {
             Navigation
           </NavLink>
         </li>
-        <li className="nav__link nav-link dropdown">
+        <li className="nav__link nav-link dropdown nav__link__dropdown">
           <NavLink
             to="/profile"
-            activeClassName="active"
-            onClick={handleLinkClick}
+            onClick={toggleUserMenu}
+            className="nav__profile__icon"
           >
-            Profile
+            {/* Profile
+             */}
+            <box-icon type="solid" name="user-circle"></box-icon>
           </NavLink>
+          {isUserMenuOpen && (
+            <ul className="subnav__link__container">
+              <li className="subnav__link">
+                <NavLink to="/station" onClick={handleLinkClick}>
+                  View Station
+                </NavLink>
+              </li>
+              <li className="subnav__link">
+                <NavLink to="/changepassword" onClick={handleLinkClick}>
+                  Change Password
+                </NavLink>
+              </li>
+              <li className="subnav__link" onClick={onLogout}>
+                <NavLink to="/login">Log out</NavLink>
+              </li>
+            </ul>
+          )}
         </li>
       </ul>
       <div className="menu__btn" onClick={toggleMenu}>

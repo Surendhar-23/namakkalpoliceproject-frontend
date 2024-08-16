@@ -52,6 +52,48 @@
   color: #273469 !important;
 }
 
+.nav__link__dropdown {
+  position: relative;
+  fill: #fff;
+}
+
+.nav__profile__icon {
+  fill: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active.nav__profile__icon {
+  fill: #273469;
+}
+
+.subnav__link__container {
+  background-color: #142995;
+
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  list-style: none;
+  width: max-content;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.subnav__link {
+  word-break: keep-all;
+  width: 100%;
+}
+
+.subnav__link:hover {
+  border-radius: 5px;
+  background-color: blue;
+}
+
 /* media query */
 @media screen and (max-width: 600px) {
   .nav__logo {
@@ -93,5 +135,9 @@
     transform: translateY(0); /* Slide in from the top when open */
     opacity: 1; /* Make visible */
     height: auto; /* Adjust height */
+  }
+
+  .subnav__link__container {
+    position: static;
   }
 }

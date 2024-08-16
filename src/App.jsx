@@ -13,6 +13,7 @@ import Navbar from "./components/Navbar";
 import Login from "./components/Login";
 import Schedule from "./components/Schedule";
 import Forecast from "./components/Forecast";
+import ChangePassword from "./components/ChangePassword";
 // import Navigation from "./pages/Navigation";
 // import Profile from "./pages/Profile";
 
@@ -81,6 +82,12 @@ function App() {
           <Route
             path="/forecast"
             element={isAuthenticated ? <Forecast /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/changepassword"
+            element={
+              isAuthenticated ? <ChangePassword /> : <Navigate to="/login" />
+            }
           />
         </Routes>
       </div>
