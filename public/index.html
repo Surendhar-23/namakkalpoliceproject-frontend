@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namakkal Map</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+    
+</head>
+<body>
+    <div id="map"></div>
+    
+    <div id="controls">
+        <button id="toggleControls">Show Controls</button>
+        <div id="input" class="hidden">
+            <input type="text" id="areaName" onkeyup="suggestAreas()">
+            <ul id="suggestions" class="suggestions-list"></ul>
+            <button onclick="searchArea()">Search Area</button>
+            <select id="type">
+                <option value="person">Person (Rowdy)</option>
+                <option value="area">Area (Alcohol Distillation)</option>
+            </select>
+            <input type="text" id="label" placeholder="Name">
+            <input type="text" id="description" placeholder="Description">
+            <input type="text" id="latitude" placeholder="Latitude">
+            <input type="text" id="longitude" placeholder="Longitude">
+            <button onclick="addPin()">Add Pin</button>
+            <button onclick="deletePin()">Delete Selected Pin</button>
+            <div id="button-container">
+                <button id="routeButton">Start Route</button>
+                <button id="clearRouteButton">Clear Route</button>
+                <button id="locateButton">Locate</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

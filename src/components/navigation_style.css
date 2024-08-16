@@ -1,0 +1,19 @@
+.map__screen {
+  position: relative;
+}
+
+.fullscreen__btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  fill: #444;
+  background: #eee;
+}
+
+.fullscreen__btn box-icon {
+  width: 40px;
+  height: 40px;
+}
