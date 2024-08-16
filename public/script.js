@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/api";
+const API_URL = "https://namakkalpoliceproject-backend.vercel.app/api";
 
 document.addEventListener("DOMContentLoaded", function () {
   //NAMAKKAL -11.219382573978306, 78.16782586596578
