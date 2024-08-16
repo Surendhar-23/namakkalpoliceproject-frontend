@@ -1,0 +1,75 @@
+.schedule__container {
+  font-size: 18px;
+}
+
+#navDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: cadetblue;
+}
+
+#nav li {
+  text-align: center;
+}
+
+#titleDiv {
+  display: flex;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  color: whitesmoke;
+  letter-spacing: 2px;
+}
+
+.ruler {
+  background-color: black;
+  height: 2px;
+  width: 100%;
+  margin: 0%;
+}
+
+#nav a {
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+#logo {
+  height: auto;
+  width: 10%;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 2px solid black;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.8rem;
+}
+
+th,
+td {
+  background-color: #d3d3d3;
+}
+
+td {
+  max-width: 100px;
+}
+
+.form-control {
+  border-radius: 0;
+  border: 1px solid #ced4da;
+  font-size: 1.8rem;
+}
+
+.input-group-text {
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  font-size: 1.8rem;
+}
+
+.form-label {
+  font-weight: bold;
+}

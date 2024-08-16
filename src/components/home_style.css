@@ -1,0 +1,22 @@
+.home__conatiner {
+  padding: 2rem 8rem;
+}
+
+.home__boxes {
+  padding: 8rem 4.4rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Media query */
+
+@media screen and (max-width: 600px) {
+  .home__conatiner {
+    padding: 2rem 4rem;
+  }
+  .home__boxes {
+    padding: 4rem 1rem;
+    flex-direction: column;
+  }
+}

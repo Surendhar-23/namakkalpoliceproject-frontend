@@ -1,0 +1,69 @@
+.home__box {
+  background: #273469;
+  padding: 3.2rem 6.2rem;
+  color: #fff;
+  display: flex;
+  gap: 0.8rem;
+  font-size: 1.8rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  position: relative;
+}
+
+.home__box__icon {
+  color: #fff;
+  align-self: start;
+  /* background-color: yellow; */
+}
+.home__box__icon box-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.home__box__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: self-start;
+  gap: 1.6rem;
+}
+
+.home__box__content h3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.home__box__content p {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.home__box__content button {
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding: 1.2rem 2.4rem;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.home__box__content button:hover {
+  background: #ddd;
+}
+
+.submit__notification {
+  top: 16px;
+  right: 16px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.submit__notification box-icon {
+  fill: orange;
+  width: 30px;
+  height: 30px;
+}
+
+/* Media query */

@@ -1,0 +1,273 @@
+.forecast {
+  position: relative;
+  /*top: 50%;
+  /* left: 50%;
+  transform: translate(-50%, -50%);
+  background: whitesmoke;
+  color: black;
+  border-radius: 5px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* /* width: 40vw; 
+  padding: 0 0 15px 0; */
+  /* max-height: 80vh; */
+}
+
+.head {
+  font-weight: 600;
+  margin: 10px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: whitesmoke;
+}
+
+.closeBtn:hover {
+  background-color: transparent;
+  border: none;
+}
+
+.closeBtn img {
+  height: 20px;
+}
+
+.formSection {
+  /* width: 28vw; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.addforecastsection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.forecast__type__select {
+  border-radius: 5px;
+  padding: 1.4rem 1rem;
+  width: 25vw;
+  align-items: center;
+  /* height: 5vh; */
+  color: black;
+  font-size: 1.6rem;
+  border: 1px solid black !important;
+  background-color: whitesmoke;
+  border: none;
+}
+
+.forecast__sumbit__btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.addforecast__subform {
+  width: 100%;
+}
+
+.addforecast__child__container {
+  width: 100%;
+}
+
+.addforecast__subform input {
+  border-radius: 5px;
+  /* width: 14.5vw; */
+  align-items: center;
+  /* height: 5vh; */
+  color: black;
+  font-size: 1.5rem;
+  background-color: whitesmoke;
+  padding: 1rem 1rem;
+}
+
+/* form */
+
+.vipform {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  /* width: 32vw; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+  z-index: 1000;
+
+  padding: 1rem 2rem;
+}
+
+.form-control {
+  /* width: 21vw; */
+  width: 50%;
+}
+
+.vipform .form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.vipform .form-group .form-control {
+  width: 100%;
+}
+
+.vipform .form-group .inputDiv {
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+
+  flex-direction: row;
+  /* width: 70%; */
+  color: black;
+  /* background-color: #007bff; */
+}
+.vipform .form-group .inputDiv .form-control {
+  /* width: 120px; */
+  /* padding: 10px; */
+  /* padding: 1rem 2rem;   */
+}
+::-webkit-calendar-picker-indicator {
+  /* filter: invert(1); */
+}
+
+.vipform::-webkit-scrollbar {
+  display: none;
+}
+
+.form-check-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.chech {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.form-check {
+  /* text-align: center; */
+  /* background-color: #777; */
+}
+
+.form-check-label {
+  /* position: relative; */
+  /* padding-left: 30px; */
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+}
+
+.form-check-input {
+}
+
+.form-check-input:checked + .form-check-label {
+  background-color: lightgrey;
+  border-color: lightgrey;
+}
+
+.subForecastOption {
+  color: black;
+}
+/* 
+.permission {
+  margin-left: 20px;
+}
+
+.permission::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: -8px;
+  width: 100px;
+  height: 40px;
+
+  border-radius: 7px;
+  border: 2px solid lightgrey;
+  background-color: white;
+  transition: background-color 0.3s, border-color 0.3s;
+  z-index: -10;
+} */
+
+textarea {
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+/* 
+.crowd {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+} */
+
+textarea {
+  color: black;
+}
+
+/* popup */
+
+/* styles/Popup.css */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.popup-content .btn.custom-close {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
