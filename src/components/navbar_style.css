@@ -27,11 +27,11 @@
   font-size: 2rem;
   gap: 1.6rem;
   list-style: none;
+  align-items: center;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  transform: translateY(-100%);
-  opacity: 0;
+  /* transform: translateY(-100%); */
+  /* opacity: 0;
   height: 0; /* Start with zero height */
-  overflow: hidden;
 }
 
 .menu__btn {
