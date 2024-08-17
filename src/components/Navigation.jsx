@@ -7,7 +7,6 @@ export default function Navigation() {
 
   const toggleFullScreen = () => {
     if (!document.fullscreenElement) {
-      // Enter fullscreen mode
       iframeContainerRef.current
         .requestFullscreen()
         .then(() => setIsFullScreen(true))
@@ -43,7 +42,7 @@ export default function Navigation() {
           )}
         </button>
         <iframe
-          src="/index.html"
+          src="/map.html"
           title="Embedded HTML Page"
           style={{ width: "100%", height: "100%", border: "none" }}
         />
