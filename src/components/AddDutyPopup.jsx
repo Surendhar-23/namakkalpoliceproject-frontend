@@ -3,7 +3,7 @@ import "./AddDutyPopup_style.css";
 
 export default function AddDutyPopup({ onCloseClick }) {
   return (
-    <div className="popup">
+    <div className="popup" style={{ zIndex: 10 }}>
       <div
         className="popupBox container-md my-5 p-5 overflow-auto"
         style={{ maxHeight: "90vh" }}

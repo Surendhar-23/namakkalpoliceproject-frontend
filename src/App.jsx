@@ -15,6 +15,7 @@ import Schedule from "./components/Schedule";
 import Forecast from "./components/Forecast";
 import ChangePassword from "./components/ChangePassword";
 import Navigation from "./components/Navigation";
+import ViewStation from "./components/ViewStation";
 // import Navigation from "./pages/Navigation";
 // import Profile from "./pages/Profile";
 
@@ -88,6 +89,12 @@ function App() {
             path="/navigation"
             element={
               isAuthenticated ? <Navigation /> : <Navigate to="/login" />
+            }
+          />
+          <Route
+            path="/station"
+            element={
+              isAuthenticated ? <ViewStation /> : <Navigate to="/login" />
             }
           />
           <Route

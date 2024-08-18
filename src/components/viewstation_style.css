@@ -1,0 +1,54 @@
+.station__container {
+  background-color: #273469;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  gap: 3.4rem;
+  box-sizing: border-box;
+}
+
+.station__sidenav {
+  color: #fff;
+  width: 20rem; /* Fixed width for sidebar */
+  height: 100vh; /* Full height of the viewport */
+  background-color: #2c3e50;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 10rem;
+  z-index: 1;
+
+  /* Adjust if you have a top navigation bar */
+}
+
+.sidenav__list {
+  width: 100%;
+}
+
+.station__sidenav__container {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.sidenav__list {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.sidenav__list:hover {
+  background-color: #34495e;
+}
+
+.station__main {
+  width: 100%;
+  color: #fff;
+  margin-left: 20rem;
+  padding: 20px;
+}
+
+.active_sidenav {
+  background: #fff !important;
+  color: #273469 !important;
+}

@@ -56,7 +56,9 @@ const DutyForm = ({ officer, index, updateSchedule }) => {
       className="officers my-3 row"
       data-officer-id={officer.id || `p${index + 1}`}
     >
-      <label className="officername h2 ms-2">{officer.name}</label>
+      <label className="officername h2 ms-2">
+        {officer.id} - {officer.name}
+      </label>
 
       <div className="col-md-12 d-flex flex-column flex-md-row align-items-center">
         <select

@@ -3,18 +3,6 @@ export const policeOfficers = [
   { id: "p02", name: "Officer 2" },
   { id: "p03", name: "Officer 3" },
   { id: "p04", name: "Officer 4" },
-  { id: "p01", name: "Officer 1" },
-  { id: "p02", name: "Officer 2" },
-  { id: "p03", name: "Officer 3" },
-  { id: "p04", name: "Officer 4" },
-  { id: "p01", name: "Officer 1" },
-  { id: "p02", name: "Officer 2" },
-  { id: "p03", name: "Officer 3" },
-  { id: "p04", name: "Officer 4" },
-  { id: "p01", name: "Officer 1" },
-  { id: "p02", name: "Officer 2" },
-  { id: "p03", name: "Officer 3" },
-  { id: "p04", name: "Officer 4" },
 ];
 
 // { id: "p06", name: 'Officer 6' },
