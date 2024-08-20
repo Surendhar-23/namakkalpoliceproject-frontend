@@ -1,6 +1,12 @@
 .forecast__container {
   padding: 2.2rem 8rem;
   font-size: 1.8rem;
+  position: relative; /* Ensure it respects z-index */
+  z-index: 10; /
+}
+
+.popup{
+  z-index: 2;
 }
 
 .app {

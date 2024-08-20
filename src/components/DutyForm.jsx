@@ -48,7 +48,7 @@ const DutyForm = ({ officer, index, updateSchedule }) => {
     const dutyDescription = customInput
       ? `${dutyName} - ${customInput}`
       : dutyName;
-    updateSchedule(index, officer.name, dutyType, dutyDescription);
+    updateSchedule(index, dutyType, dutyDescription);
   };
 
   return (

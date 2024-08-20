@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import API_BASE_URL from "../../apiConfig";
 
@@ -6,34 +6,67 @@ export default function AddOfficerPopup({
   show,
   handleClose,
   refreshOfficers,
+  officer, // New prop for the officer being edited
 }) {
   const [id, setId] = useState("");
   const [name, setName] = useState("");
   const [designation, setDesignation] = useState("");
   const [message, setMessage] = useState("");
 
+  useEffect(() => {
+    if (officer) {
+      // If an officer is passed in, populate the form fields with the officer's data
+      setId(officer.id);
+      setName(officer.name);
+      setDesignation(officer.designation);
+    } else {
+      // Reset the form fields if no officer is passed in (i.e., adding a new officer)
+      setId("");
+      setName("");
+      setDesignation("");
+    }
+  }, [officer]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const newOfficer = { id, name, designation };
     setMessage("");
-    axios
-      .post(`${API_BASE_URL}/addofficer`, newOfficer)
-      .then((response) => {
-        console.log("Officer added:", response.data);
-        setMessage("Officer added successfully..!");
-        setId("");
-        setName("");
-        setDesignation("");
-        setTimeout(() => {
-          refreshOfficers(); // Refresh the list of officers after adding
-          handleClose(); // Close the modal after successful submission
-        }, 3000);
-      })
-      .catch((error) => {
-        setMessage("There was an error adding the officer");
-        console.error("There was an error adding the officer!", error);
-      });
+
+    const officerData = { id, name, designation };
+
+    if (officer) {
+      // If editing an existing officer
+      axios
+        .put(`${API_BASE_URL}/officer/${officer.id}`, officerData)
+        .then((response) => {
+          setMessage("Officer updated successfully!");
+          setTimeout(() => {
+            refreshOfficers();
+            handleClose();
+          }, 3000);
+        })
+        .catch((error) => {
+          setMessage("There was an error updating the officer.");
+          console.error("There was an error updating the officer!", error);
+        });
+    } else {
+      // If adding a new officer
+      axios
+        .post(`${API_BASE_URL}/addofficer`, officerData)
+        .then((response) => {
+          setMessage("Officer added successfully!");
+          setId("");
+          setName("");
+          setDesignation("");
+          setTimeout(() => {
+            refreshOfficers();
+            handleClose();
+          }, 3000);
+        })
+        .catch((error) => {
+          setMessage("There was an error adding the officer.");
+          console.error("There was an error adding the officer!", error);
+        });
+    }
   };
 
   return (
@@ -41,7 +74,9 @@ export default function AddOfficerPopup({
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title">Add New Officer</h5>
+            <h5 className="modal-title text-dark fs-3">
+              {officer ? "Edit Officer" : "Add New Officer"}
+            </h5>
             <button
               type="button"
               className="btn-close"
@@ -62,6 +97,7 @@ export default function AddOfficerPopup({
                   value={id}
                   onChange={(e) => setId(e.target.value)}
                   required
+                  disabled={!!officer} // Disable the ID field when editing
                 />
               </div>
 
@@ -98,7 +134,7 @@ export default function AddOfficerPopup({
                 <p className="text-center text-dark fs-3"> {message} </p>
               )}
               <button type="submit" className="btn btn-primary">
-                Add Officer
+                {officer ? "Update Officer" : "Add Officer"}
               </button>
             </form>
           </div>
